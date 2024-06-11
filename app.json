@@ -12,14 +12,28 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.rnnscreenleak"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.rnnscreenleak"
     },
+    "plugins": [
+      "react-native-background-fetch",
+      ["react-native-background-geolocation"],
+      [
+        "expo-gradle-ext-vars",
+        {
+          "googlePlayServicesLocationVersion": "21.0.1",
+          "appCompatVersion": "1.4.2"
+        }
+      ],
+      ["./plugins/profileable", { "mode": "development" }]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }
